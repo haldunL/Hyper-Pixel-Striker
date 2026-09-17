@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body {
+    font-family: 'Silkscreen', 'Press Start 2P', monospace;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    background-color: #0b0d13;
+    color: #e2e8f0;
+    overflow-x: hidden;
+    min-height: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.font-arcade {
+  font-family: 'Press Start 2P', monospace;
+}
+
+.font-pixel {
+  font-family: 'Silkscreen', monospace;
+}
+
+/* Pixel art rendering */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Arcade Bezel & CRT Scanlines */
+.crt-overlay::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  z-index: 40;
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.arcade-border {
+  border: 4px solid #334155;
+  box-shadow: inset 0 0 0 2px #1e293b, 0 0 0 2px #0f172a, 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+.arcade-border-gold {
+  border: 4px solid #f59e0b;
+  box-shadow: inset 0 0 0 2px #b45309, 0 0 0 2px #78350f, 0 8px 24px rgba(245, 158, 11, 0.3);
+}
+
+.arcade-text-shadow {
+  text-shadow: 2px 2px 0px #000, -2px -2px 0px #000, 2px -2px 0px #000, -2px 2px 0px #000, 0px 4px 0px rgba(0, 0, 0, 0.8);
+}

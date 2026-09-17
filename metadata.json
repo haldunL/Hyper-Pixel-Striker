@@ -1,0 +1,8 @@
+{
+  "name": "Hyper Pixel Striker",
+  "description": "16-bit retro arcade pixel art dövüş oyunu. 4 özgün karakter, 4 detaylı piksel sahne, kombolar, gamepad ve dokunmatik kontrol desteği.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
